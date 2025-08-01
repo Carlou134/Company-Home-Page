@@ -158,7 +158,7 @@ nav ul a:hover{
     flex-direction: column;
 }
 
-.productos-servicios .container{
+.container{
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
@@ -199,6 +199,45 @@ nav ul a:hover{
 
 .card p {
     padding: 25px;
+}
+
+/*Equipo*/
+.team{
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.text-team{
+    text-align: center;
+    padding: 20px;
+}
+
+.text-team h2, .text-team h3{
+    padding: 10px;
+}
+
+.img-team{
+    width: 200px !important;
+    border-radius: 20% !important;
+}
+
+.card h4{
+    padding: 20px;
+}
+
+/*Footer*/
+
+footer{
+    padding: 20px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+}
+
+footer p{
+    margin: 30px;
+    gap: 20px;
 }
 
 /*Animations y Responsive Web Design*/
