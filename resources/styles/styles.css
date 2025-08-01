@@ -2,6 +2,7 @@
 --nav-color-background: #3E2723;
 --nav-color-text: #F5F5F5;
 --nav-color-hover: #D4A373;
+--color-text: var(--nav-color-text);
 }
 
 * {
@@ -19,6 +20,8 @@ body{
                          "team"
                          "footer footer";          
 }
+
+/*Navegador*/
 
 header{
     grid-area: header;
@@ -68,4 +71,94 @@ nav ul a{
 
 nav ul a:hover{
     color: var(--nav-color-hover);
+}
+
+/*Principal*/
+
+.hero-splash{    
+    width: 100%;
+    min-height: 1060px;
+    background-image: url('/resources/images/taza-gramos-cafe.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-splash h2{
+    font-size: 4rem;
+    animation-duration: 3s;
+    animation-name: slide-in;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    filter: drop-shadow(-10px 5px 0.6rem black);
+    padding: 20px;
+}
+
+.hero-splash p {
+    font-size: 2rem;
+    animation-duration: 3s;
+    animation-name: slide-in;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    padding: 20px;
+}
+
+/*Mision*/
+
+.mission{
+    width: 100%;
+    min-height: 1000px;
+    display: flex;
+    background-color: black;
+    color: var(--color-text)
+}
+
+.mission .image{
+    width: 50%;
+    background-image: url('/resources/images/cup-of-cofee.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 50%;
+}
+
+.text-mission{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-mission h2, .text-mission p {
+    padding: 20px;
+}
+
+.text-mission h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.text-mission p{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/*Animations y Responsive Web Design*/
+
+@keyframes slide-in {
+  from {
+    translate: 150vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
 }
