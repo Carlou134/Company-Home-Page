@@ -14,12 +14,15 @@
 }
 
 body{
-    grid-template-areas: "header header"
+    display: grid;
+    grid-template-areas: "header"
                          "hero-splash"
                          "mission"
                          "productos-servicios"
                          "team"
-                         "footer footer";          
+                         "footer";
+    width: 100%;
+    margin: 0;
 }
 
 /*Navegador*/
@@ -84,9 +87,11 @@ nav ul a:hover{
     background-position: center;
     background-size: cover;
     color: var(--color-text);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-area: hero-splash;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: start;
     gap: 20px;
 }
 
@@ -114,13 +119,15 @@ nav ul a:hover{
 .mission{
     width: 100%;
     min-height: 1000px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-area: mission;
     background-color: black;
     color: var(--color-text)
 }
 
 .mission .image{
-    width: 50%;
+    width: 100%;
     background-image: url('/resources/images/cup-of-cofee.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -153,7 +160,8 @@ nav ul a:hover{
 /*Productos*/
 
 .productos-servicios{
-    display: flex;
+    display: grid;
+    grid-area: productos-servicios;
     min-height: 800px;
     flex-direction: column;
 }
@@ -183,6 +191,7 @@ nav ul a:hover{
 .card:hover{
     font-weight: bold;
     font-size: 1.2rem;
+    border: 3px solid var(--nav-color-background);
     transition: all 1.5s linear 0.5s;
 }
 
@@ -195,6 +204,7 @@ nav ul a:hover{
     width: 50%;
     height: 300px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .card p {
@@ -203,6 +213,8 @@ nav ul a:hover{
 
 /*Equipo*/
 .team{
+    display: grid;
+    grid-area: team;
     background-color: var(--color-background);
     color: var(--color-text);
 }
@@ -231,8 +243,13 @@ footer{
     padding: 20px;
     background-color: var(--color-background);
     color: var(--color-text);
-    display: flex;
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
 }
 
 footer p{
