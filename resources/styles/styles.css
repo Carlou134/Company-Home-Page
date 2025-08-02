@@ -65,6 +65,10 @@ nav ul {
     list-style: none;
     gap: 25px;
     justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
     font-size: 1.5rem;
 }
 
@@ -182,7 +186,9 @@ nav ul a:hover{
     border-radius: 20%;
     align-items: center;
     justify-content: center;
-    min-width:800px;
+    min-width:200px;
+    max-width: 400px;
+    flex: 1 1 300px;
     padding: 10px;
     margin: 20px;
     color: var(--color-text);
@@ -195,16 +201,22 @@ nav ul a:hover{
     transition: all 1.5s linear 0.5s;
 }
 
+.text-productos{
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
 .text-productos h2{
     padding: 20px;
     text-align: center;
 }
 
 .card img {
-    width: 50%;
+    width: 80%;
     height: 300px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
 .card p {
@@ -220,8 +232,14 @@ nav ul a:hover{
 }
 
 .text-team{
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
+    background-color: var(--nav-color-text);
+    color: var(--color-background);
 }
 
 .text-team h2, .text-team h3{
@@ -240,7 +258,7 @@ nav ul a:hover{
 /*Footer*/
 
 footer{
-    padding: 20px;
+    padding: 10px;
     background-color: var(--color-background);
     color: var(--color-text);
     display: grid;
@@ -250,6 +268,7 @@ footer{
     align-content: center;
     align-items: center;
     justify-items: center;
+    flex-wrap: wrap;
 }
 
 footer p{
@@ -259,7 +278,7 @@ footer p{
 
 /*Animations y Responsive Web Design*/
 
-@media only screen and (max-width: 415px){
+@media only screen and (max-width: 650px){
     header{
         grid-area: header;
         display: grid;
@@ -272,7 +291,7 @@ footer p{
     }
 
     .text-logo{
-        text-justify: center;
+        text-align: center;
         justify-content: center;
         justify-items: center;
     }
@@ -324,6 +343,11 @@ footer p{
         text-justify: center;
     }
 
+    .mission{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
     .text-productos h2{
         font-size: 2.5rem;
     }
@@ -347,12 +371,12 @@ footer p{
     }
 
     .card img {
-        width: 50%;
+        width: 90%;
         height: 400px;
     }
 
     .img-team{
-        width: 50% !important;
+        width: 90% !important;
         height: 50%;
         border-radius: 20% !important;
     }
@@ -366,6 +390,19 @@ footer p{
         align-items: center;
         justify-items: center;
         font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .hero-splash{
+        min-height: 60vh;
     }
 }
 
